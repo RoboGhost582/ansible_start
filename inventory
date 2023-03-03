@@ -1,0 +1,10 @@
+#Change the permisson for ssh_key to 400 (read-only)
+web  ansible_host=172.31.58.153 ansible_user=ubuntu ansible_ssh_private_key_file=ssh_key.pem
+work  ansible_host=172.31.60.214 ansible_user=ubuntu ansible_ssh_private_key_file=ssh_key.pem
+
+
+[webservers]
+web
+
+[workstations]
+work

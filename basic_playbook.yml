@@ -4,7 +4,7 @@
   roles:
     - update_upgrade
 
-- hosts: websrvgrp
+- hosts: webservers
   become: yes
   roles:
     - webservers
@@ -13,3 +13,4 @@
   become: yes
   roles:
     - workstations
+    - install_docker
