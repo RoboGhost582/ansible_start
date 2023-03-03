@@ -1,0 +1,5 @@
+- name: Create user Bryan
+  user:
+    name: Bryan
+    groups: root
+  when: ansible_distribution == "Ubuntu"

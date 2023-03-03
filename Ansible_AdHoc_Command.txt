@@ -1,0 +1,28 @@
+# Ping Module
+ansible -m ping [group or host]
+ansible -m ping all
+
+# Copy Module
+ansible -m copy -a src="/src/path" dest="/dest/path"
+
+# Gathering Facts
+ansible -m gather_facts all
+
+# Gathering Facts about Distribution 
+ansible -m gather_facts all | grep ansible_distribution
+
+# Update
+ansible -m apt -a update_cache=true --become 
+
+# Upgrade
+ansible -m apt -a "upgrade=dist" --become 
+
+# Install
+ansible -m apt -a "name=tmux state=latest" --become 
+
+# Check Playbook
+ansible-playbook [playbook file] --syntax-check
+
+# Run Playbook
+ansible-playbook [playbook file]
+

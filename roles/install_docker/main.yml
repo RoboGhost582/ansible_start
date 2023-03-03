@@ -1,0 +1,10 @@
+- name: Copy Docker file to machine
+  copy:
+    src: /path/to/file
+    dest: /etc/foo.conf
+    owner: root
+    group: root
+    mode: '0644'
+
+- name: Install Docker from bash
+  shell: docker.sh 

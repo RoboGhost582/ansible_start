@@ -1,0 +1,19 @@
+- name: Install Multiple Packages
+  apt:
+    name: 
+      - htop
+      - net-tools
+      - unzip
+    state: present
+  when: ansible_distribution == "Ubuntu" and ansible_distribution == "22.04"
+
+- name: Installing Terraform 
+  unarchive:
+    name: 
+    src: https://releases.hashicorp.com/terraform/1.3.9/terraform_1.3.9_linux_amd64.zip
+    dest: /usr/local/bin
+    remote_src: yes
+    mode: 0775
+    owner: root
+    group: root 
+  when: ansible_distribution == "Ubuntu" and ansible_distribution == "22.04"

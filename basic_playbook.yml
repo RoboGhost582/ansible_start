@@ -1,0 +1,15 @@
+---
+- hosts: all
+  become: yes
+  roles:
+    - update_upgrade
+
+- hosts: websrvgrp
+  become: yes
+  roles:
+    - webservers
+
+- hosts: workstations
+  become: yes
+  roles:
+    - workstations

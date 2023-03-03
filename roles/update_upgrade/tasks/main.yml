@@ -1,0 +1,5 @@
+- name: Install Updates (Ubuntu)
+  apt:
+    upgrade: dist
+    update_cache: Yes
+  when: ansible_distribution == "Ubuntu" 
