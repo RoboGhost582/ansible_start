@@ -7,10 +7,4 @@
 - hosts: dockube
   become: yes
   roles:
-    - install_docker 
     - install_java11
-
-- hosts: jenkins
-  become: yes
-  roles:
-    - install_jenkins

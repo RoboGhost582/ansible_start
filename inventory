@@ -1,10 +1,9 @@
 #Change the permisson for ssh_key to 400 (read-only)
-web  ansible_host=172.31.58.153 ansible_user=ubuntu ansible_ssh_private_key_file=ssh_key.pem
-work  ansible_host=172.31.60.214 ansible_user=ubuntu ansible_ssh_private_key_file=ssh_key.pem
+jk  ansible_host=192.168.56.111 ansible_user=vagrant ansible_ssh_private_key_file=/home/vagrant/ssh/jenkins_key.pem
+dk  ansible_host=192.168.56.110 ansible_user=vagrant ansible_ssh_private_key_file=/home/vagrant/ssh/dockube_key.pem
 
+[jenkins]
+jk
 
-[webservers]
-web
-
-[workstations]
-work
+[dockube]
+dk
